@@ -1,0 +1,7 @@
+src/test/resources/config.properties
+
+# Config files chứa credentials
+src/test/resources/config.properties
+src/test/resources/config-dev.properties
+src/test/resources/config-staging.properties
+*.properties
