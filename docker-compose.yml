@@ -1,0 +1,36 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  selenium-hub:
+    image: selenium/hub:4.18.1
+    container_name: selenium-hub
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"   # Grid UI và WebDriver endpoint
+
+  chrome-node-1:
+    image: selenium/node-chrome:4.18.1
+    shm_size: 2gb          # Quan trọng: Chrome cần shared memory
+    depends_on: [ selenium-hub ]
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_NODE_MAX_SESSIONS=3
+      - SE_NODE_SESSION_TIMEOUT=300
+
+  chrome-node-2:
+    image: selenium/node-chrome:4.18.1
+    shm_size: 2gb
+    depends_on: [ selenium-hub ]
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_NODE_MAX_SESSIONS=3
+
+  firefox-node:
+    image: selenium/node-firefox:4.18.1
+    shm_size: 2gb
+    depends_on: [ selenium-hub ]
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_NODE_MAX_SESSIONS=2
