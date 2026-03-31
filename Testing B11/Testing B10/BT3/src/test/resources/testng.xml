@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="BT3 API Suite">
+    <test name="JSON Schema Validation Tests">
+        <classes>
+            <class name="bt3.JsonSchemaValidationTest"/>
+        </classes>
+    </test>
+</suite>

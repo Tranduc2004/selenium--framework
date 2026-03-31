@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="BT6 API + UI Integration Suite">
+    <test name="BT6 Tests">
+        <classes>
+            <class name="bt6.PartAApiPreconditionUiTest"/>
+            <class name="bt6.PartBFullIntegrationFlowTest"/>
+        </classes>
+    </test>
+</suite>

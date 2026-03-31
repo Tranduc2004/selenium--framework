@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="BT5 API Suite">
+    <test name="Performance Assertion and SLA Monitoring Tests">
+        <classes>
+            <class name="bt5.PerformanceSlaTest"/>
+        </classes>
+    </test>
+</suite>

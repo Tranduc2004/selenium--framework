@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="BT4 API Suite">
+    <test name="Authorization and Error Handling Tests">
+        <classes>
+            <class name="bt4.AuthorizationTest"/>
+            <class name="bt4.LoginDataDrivenTest"/>
+        </classes>
+    </test>
+</suite>

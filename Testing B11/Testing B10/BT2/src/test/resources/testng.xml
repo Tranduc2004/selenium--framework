@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="BT2 API Suite">
+    <test name="CRUD User API Tests">
+        <classes>
+            <class name="bt2.CrudUserApiTest"/>
+        </classes>
+    </test>
+</suite>
